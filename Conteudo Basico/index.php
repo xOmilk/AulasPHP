@@ -12,11 +12,11 @@
 
     $nóme='Antonio gabriel';
 
-    print $nóme;
-
     echo "<p>Olá mundo no paragrafo echo</p>";
     print("Hello world utilizando o print");
     ?>
+
+    
 </body>
 
 </html>
