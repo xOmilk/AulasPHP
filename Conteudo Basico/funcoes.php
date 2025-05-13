@@ -10,13 +10,19 @@
 <body>
     <?php
 
-    $nóme='Antonio gabriel';
 
-    echo "<p>Olá mundo no paragrafo echo</p>";
-    print("Hello world utilizando o print");
+
+
+    function adicionarBoasVindas($nome)
+    {
+        print "Seja bem vindo $nome";
+    }
+    
+    adicionarBoasVindas('Antonio');
+
     ?>
 
-    
+
 </body>
 
 </html>
