@@ -68,7 +68,7 @@
         if (is_array($array)) {
             print("<p class='positive'>O parametro fornecido é um array</p>");
         } else {
-            print "<p class='negative'>O parametro fornecido [$array]º <b>NÃO</b> um array</p>";
+            print "<p class='negative'>O parametro fornecido [$array] <b>NÃO</b> um array</p>";
             return;
         }
         $lengh = (count($array) === 0) ? print "O array possui tamanho zero" : count($array);
@@ -89,6 +89,7 @@
                 foreach ($funcionario as $atributo => $valor) {
                     echo "$atributo: $valor<br>";
                 }
+                echo "<hr>";
             }
 
             echo "</pre>";
@@ -107,7 +108,8 @@
 
     printArrayMultiDimensional($funcionarios);
 
-
+    $variavel = 'Eu sou uma variavel';
+    printArrayMultiDimensional($variavel);
 
 
     ?>
