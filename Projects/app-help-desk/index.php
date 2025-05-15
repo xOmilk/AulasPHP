@@ -40,6 +40,22 @@
               <div class="form-group">
                 <input name="password" type="password" class="form-control" placeholder="Senha">
               </div>
+              <?php
+              //Se foi apontado dentro da url que possui um erro
+              if (isset($_GET['login']) && $_GET['login'] == 'erro') {
+                /* ATENÇÃO EM RELAÇÃO A ABERTURA DO BLOCO IF
+                   QUE SOMENTE FECHA APOS OUTRO BLOCO PHP, SENDO ASSIM
+                   O HTML INSERIDO SÓ VAI SER FEITO CASO O BLOCO IF FOR
+                   CONSIDERADO COMO VERDADEIRO
+                */
+
+              ?>
+                <div class="text-danger">Usuário ou senha invalidos</div>
+
+
+              <?php } ?>
+
+
               <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
             </form>
           </div>
