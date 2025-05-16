@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 function recolherUsuario()
 {
 
@@ -35,7 +37,7 @@ function verifyUser()
     $usuario = recolherUsuario();
 
     if ($usuario === null) {
-        echo "Erro: não foi possivel coletar os dados do usuario";
+        echo "Erro: não foi possivel coletar os dados do usuario<br>";
         return;
     }
 
@@ -54,25 +56,10 @@ function verifyUser()
 
     if ($verified) {
         echo "Usuario autenticado";
-    }
-    else{
+        $_SESSION['autenticado'] = 'sim';
+    } else {
+        $_SESSION['autenticado'] = 'nao';
         header('Location: ../index.php?login=erro');
     }
 }
 verifyUser();
-
-
-
-
-
-
-
-/* print_r($_POST);
-echo "<br>";
-
-echo $_POST['email'];
-echo "<br>";
-echo $_POST['password'];
-echo "<br>";
-
-echo "teste!!!"; */
