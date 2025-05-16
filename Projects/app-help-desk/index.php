@@ -35,6 +35,23 @@
           <div class="card-body">
             <form action="./scripts/validate-login.php" method="post">
               <div class="form-group">
+
+                <?php
+                //Se foi apontado dentro da url que possui um erro DE AUTENTICAÇÃO
+                if (isset($_GET['login']) && $_GET['login'] == 'erroAuth') { ?>
+                  <!-- ATENÇÃO EM RELAÇÃO A ABERTURA DO BLOCO IF
+                QUE SOMENTE FECHA APOS OUTRO BLOCO PHP, SENDO ASSIM
+                O HTML INSERIDO SÓ VAI SER FEITO CASO O BLOCO IF FOR
+                CONSIDERADO COMO VERDADEIRO -->
+
+
+
+                  <div style="margin-bottom: 10px;" class="text-danger">É preciso se autenticar para acessar outras paginas</div>
+
+
+                <?php } ?>
+
+
                 <input name="email" type="email" class="form-control" placeholder="E-mail">
               </div>
               <div class="form-group">
@@ -42,15 +59,15 @@
               </div>
               <?php
               //Se foi apontado dentro da url que possui um erro
-              if (isset($_GET['login']) && $_GET['login'] == 'erro') {
-                /* ATENÇÃO EM RELAÇÃO A ABERTURA DO BLOCO IF
-                   QUE SOMENTE FECHA APOS OUTRO BLOCO PHP, SENDO ASSIM
-                   O HTML INSERIDO SÓ VAI SER FEITO CASO O BLOCO IF FOR
-                   CONSIDERADO COMO VERDADEIRO
-                */
+              if (isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
+                <!-- ATENÇÃO EM RELAÇÃO A ABERTURA DO BLOCO IF
+                QUE SOMENTE FECHA APOS OUTRO BLOCO PHP, SENDO ASSIM
+                O HTML INSERIDO SÓ VAI SER FEITO CASO O BLOCO IF FOR
+                CONSIDERADO COMO VERDADEIRO -->
 
-              ?>
-                <div class="text-danger">Usuário ou senha invalidos</div>
+
+
+                <div style="margin-bottom: 10px;" class="text-danger">Usuário ou senha invalidos</div>
 
 
               <?php } ?>
