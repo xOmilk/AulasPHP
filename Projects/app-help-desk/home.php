@@ -29,6 +29,13 @@ require_once "./scripts/validate-acess.php";
       <img src="./assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
       App Help Desk
     </a>
+
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="./scripts/logoff.php" class="nav-link">SAIR</a>
+      </li>
+    </ul>
+
   </nav>
 
   <div class="container">
@@ -48,7 +55,7 @@ require_once "./scripts/validate-acess.php";
               </div>
               <div class="col-6 d-flex justify-content-center">
                 <a href="./consultar_chamado.php">
-                <img src="./assets/formulario_consultar_chamado.png" width="70" height="70">
+                  <img src="./assets/formulario_consultar_chamado.png" width="70" height="70">
                 </a>
               </div>
             </div>
