@@ -1,0 +1,9 @@
+* The include and require statements are identical, except upon failure:
+
+- require will produce a fatal error (E_COMPILE_ERROR) and stop the script
+- include will only produce a warning (E_WARNING) and the script will continue
+
+
+The *include_once* keyword is used to embed PHP code from another file. If the file is not found, a warning is shown and the program continues to run. If the file was already included previously, this statement will not include it again.
+
+The *require_once* keyword is used to embed PHP code from another file. If the file is not found, a fatal error is thrown and the program stops. If the file was already included previously, this statement will not include it again.
