@@ -57,6 +57,7 @@ function verifyUser()
     if ($verified) {
         echo "Usuario autenticado";
         $_SESSION['autenticado'] = 'sim';
+        header('Location: ../home.php?login=erro');
     } else {
         $_SESSION['autenticado'] = 'nao';
         header('Location: ../index.php?login=erro');
